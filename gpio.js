@@ -1,5 +1,6 @@
 // Created March 10th 2018
 // Frednick Piard (CodeWarrior Fred)
+// GreenFreight , Let's Feed The World! 
 
 var sleep = require('sleep');
 var Gpio = require('pigpio').Gpio;
