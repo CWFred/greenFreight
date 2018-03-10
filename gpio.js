@@ -1,3 +1,5 @@
+// Created March 10th 2018
+// Frednick Piard (CodeWarrior Fred)
 
 var sleep = require('sleep');
 var Gpio = require('pigpio').Gpio;
