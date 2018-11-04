@@ -11,7 +11,7 @@ let keypress = require("keypress");
 let twilio = require("twilio");
 let twilioClient = new twilio(accountSid, authToken);
 
-let mQTTClient = mqtt.connect("tcp://45.79.178.96:");
+let mQTTClient = mqtt.connect("tcp://broker.hivemq.com");
 let stateFile = "/home/pi/GF/latestState.json";
 
 //interact with keyboard
@@ -208,11 +208,11 @@ function publishSystemState() {
 }
 
 function setInitialState() {
-	wpi.digitalWrite(lightPin, wpi.HIGH);
-	wpi.digitalWrite(fanPin, wpi.HIGH);
-	wpi.digitalWrite(pumpPin, wpi.HIGH);
-	wpi.digitalWrite(airPumpPin, wpi.HIGH);
-	wpi.digitalWrite(exhaustPin, wpi.HIGH);
+	wpi.digitalWrite(lightPin, wpi.LOW);
+	wpi.digitalWrite(fanPin, wpi.LOW);
+	wpi.digitalWrite(pumpPin, wpi.LOW);
+	wpi.digitalWrite(airPumpPin, wpi.LOW);
+	wpi.digitalWrite(exhaustPin, wpi.LOW);
 }
 
 function outputPinSetUp(outputPins) {
