@@ -285,7 +285,6 @@ process.stdin.on("keypress", function(ch, key) {
 		if (key.name == "l") {
 			actuateLights(!state["lightStatus"]);
 		}
-
 		if (key.name == "f") {
 			actuateFan(!state["fanStatus"]);
 		}
